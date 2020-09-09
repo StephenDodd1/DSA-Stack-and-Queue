@@ -49,3 +49,45 @@ class Queue {
     return node.value;
   }
 }
+function main() {
+  let starTrek = new Stack();
+  starTrek.push("Kirk");
+  starTrek.push("Spock");
+  starTrek.push("McCoy");
+  starTrek.push("Scotty");
+  console.log(starTrek);
+  peek(starTrek);
+  isEmpty(starTrek);
+  display(starTrek)
+}
+function peek(stack) {
+  console.log(stack);
+}
+function isEmpty(stack) {
+  if (!stack.top) {
+    console.log('The stack is empty')
+  }
+  else console.log("Stack is not empty.");
+}
+function display(stack){
+  console.log(stack)
+}
+function is_palindrome(s) {
+  s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+  let sentence = new Stack();
+  let z = 0
+  while(s[z] !== undefined){
+    sentence.push(s[z])
+    z++
+  }
+  for(let i = 0; i < Math.floor(s.length / 2); i ++){
+    if(sentence.pop() !== s[i]){
+      return console.log('false')
+    }
+    continue
+  }
+  return console.log('true')
+}
+main();
+console.log(is_palindrome('dad'))
+console.log(is_palindrome('dadd'))
