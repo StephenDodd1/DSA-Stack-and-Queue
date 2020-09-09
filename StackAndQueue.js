@@ -82,12 +82,14 @@ function is_palindrome(s) {
   }
   for(let i = 0; i < Math.floor(s.length / 2); i ++){
     if(sentence.pop() !== s[i]){
-      return console.log('false')
+      return false
     }
     continue
   }
-  return console.log('true')
+  return true
 }
 main();
 console.log(is_palindrome('dad'))
-console.log(is_palindrome('dadd'))
+console.log(is_palindrome("A man, a plan, a canal: Panama"));
+console.log(is_palindrome("1001"));
+console.log(is_palindrome("Tauhida"))
